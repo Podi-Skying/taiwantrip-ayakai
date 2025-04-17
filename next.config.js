@@ -1,15 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export',
   images: {
-    domains: ['vercel.app'],
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
-  // 設定baseUrl，使網站在子路徑下正常運行
-  basePath: process.env.NODE_ENV === 'production' ? '/taiwan-travel-ayakai' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/taiwan-travel-ayakai/' : '',
-  trailingSlash: true,
+  experimental: {
+    appDir: true,
+  },
 }
 
 module.exports = nextConfig 
