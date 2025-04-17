@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'export',
   images: {
+    domains: ['vercel.app'],
     unoptimized: true,
   },
   // 設定baseUrl，使網站在子路徑下正常運行
