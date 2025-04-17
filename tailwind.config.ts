@@ -128,7 +128,8 @@ const config = {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "taiwan-pattern": "url('/placeholder.svg?height=100&width=100')",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "taiwan-cover": "url('/brand.png')",
       },
       fontFamily: {

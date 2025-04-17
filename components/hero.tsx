@@ -11,12 +11,12 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={process.env.NODE_ENV === 'production' ? '/taiwan-travel-ayakai/brand.png' : '/brand.png'}
-          alt="Taiwan Travel Hero"
-          fill
           priority
-          quality={90}
-          className="object-cover object-center"
+          className="absolute inset-0 object-cover w-full h-full"
+          src="/brand.png"
+          alt="Taiwan Travel"
+          width={1920}
+          height={1080}
         />
       </div>
       
