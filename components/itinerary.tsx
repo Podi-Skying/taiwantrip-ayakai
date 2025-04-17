@@ -969,7 +969,7 @@ const translations = {
             description: "ランチを食べる",
           },
           {
-            title: "十分瀑布",
+            title: "シーフェン滝",
             location: "新北市平渓区",
             description: "台湾の有名な滝を見学",
           },
@@ -1335,7 +1335,7 @@ const itineraryData = [
         title: "返回飯店",
         location: "台北圓山大飯店",
         description: "結束一日遊，返回飯店",
-        transportation: "utensils",
+        transportation: "開車",
         duration: "約20分鐘",
         icon: "hotel",
         image: "/attractions/圓山大飯店.jpg"
@@ -1662,9 +1662,9 @@ const getActivityIconComponent = (iconName: string) => {
 const getTransportationIcon = (transportation: string | undefined) => {
   if (!transportation) return null;
   
-  const IconComponent = TRANSPORTATION_ICONS[transportation.toLowerCase() as keyof typeof TRANSPORTATION_ICONS];
+  const IconComponent = TRANSPORTATION_ICONS[transportation as keyof typeof TRANSPORTATION_ICONS];
   if (IconComponent === "🚶") return IconComponent;
-  return IconComponent ? <IconComponent size={14} /> : null;
+  return IconComponent ? <IconComponent className="text-brand-primary" size={14} /> : null;
 };
 
 // Helper function to get activity title based on language
@@ -1696,9 +1696,67 @@ const getLocalizedDayTitle = (day: any, lang: string) => {
 // Helper function to get localized transportation type
 const getLocalizedTransportation = (transportation: string | undefined, lang: string) => {
   if (!transportation) return "";
-  const transportTypes = translations[lang as keyof typeof translations].transportTypes;
-  const key = transportation.toLowerCase().replace(/\s+/g, '-') as keyof typeof transportTypes;
-  return transportTypes[key] || transportation;
+  
+  // 建立交通方式的對照表
+  const transportationMap: { [key: string]: { [lang: string]: string } } = {
+    "開車": {
+      "zh": "開車",
+      "en": "Drive",
+      "ja": "車"
+    },
+    "捷運": {
+      "zh": "捷運",
+      "en": "MRT",
+      "ja": "MRT"
+    },
+    "公車": {
+      "zh": "公車",
+      "en": "Bus",
+      "ja": "バス"
+    },
+    "高鐵": {
+      "zh": "高鐵",
+      "en": "HSR",
+      "ja": "高速鉄道"
+    },
+    "火車": {
+      "zh": "火車",
+      "en": "Train",
+      "ja": "電車"
+    },
+    "步行": {
+      "zh": "步行",
+      "en": "Walk",
+      "ja": "徒歩"
+    },
+    "捷運&火車": {
+      "zh": "捷運&火車",
+      "en": "MRT & Train",
+      "ja": "MRT & 電車"
+    },
+    "捷運&公車": {
+      "zh": "捷運&公車",
+      "en": "MRT & Bus",
+      "ja": "MRT & バス"
+    },
+    "公車&捷運": {
+      "zh": "公車&捷運",
+      "en": "Bus & MRT",
+      "ja": "バス & MRT"
+    },
+    "高鐵&開車": {
+      "zh": "高鐵&開車",
+      "en": "HSR & Drive",
+      "ja": "高速鉄道 & 車"
+    },
+    "機場捷運": {
+      "zh": "機場捷運",
+      "en": "Airport MRT",
+      "ja": "空港MRT"
+    }
+  };
+
+  return transportationMap[transportation]?.[lang] || transportation;
 };
 
 // Helper function to get localized duration
@@ -1835,8 +1893,8 @@ export default function Itinerary() {
                       </div>
                     </div>
 
-                    <h3 className="text-2xl font-bold mb-6 ml-16 pt-2">
-                      {getLocalizedDayTitle(day, currentLang)}
+                    <h3 className="text-2xl font-bold mb-6 ml-24 pt-2">
+                      {format(new Date(day.date), 'MM/dd')} - {getLocalizedDayTitle(day, currentLang)}
                     </h3>
                     <div className="space-y-2 mt-8">
                       {day.activities.map((activity, index) => {
@@ -1893,17 +1951,17 @@ export default function Itinerary() {
                                 <p className="text-sm text-brand-textLight mb-3 line-clamp-2">{localizedData.description}</p>
                                 {activity.transportation && (
                                   <div className="flex flex-wrap items-center gap-2">
-                                    <div className="flex items-center gap-2 bg-brand-primary/5 px-2 py-1 rounded-full">
+                                    <div className="flex items-center gap-2 bg-brand-primary/5 px-3 py-1.5 rounded-full">
                                       {getTransportationIcon(activity.transportation)}
-                                      <span className="text-xs text-brand-textLight whitespace-nowrap">
-                                        {t.transportation}: {getLocalizedTransportation(activity.transportation, currentLang)}
+                                      <span className="text-xs text-brand-textLight">
+                                        {getLocalizedTransportation(activity.transportation, currentLang)}
                                       </span>
                                     </div>
                                     {activity.duration && (
-                                      <div className="flex items-center gap-2 bg-brand-primary/5 px-2 py-1 rounded-full">
-                                        <Clock className="h-3 w-3 text-brand-primary flex-shrink-0" />
-                                        <span className="text-xs text-brand-textLight whitespace-nowrap">
-                                          {t.duration}: {getLocalizedDuration(activity.duration, currentLang)}
+                                      <div className="flex items-center gap-2 bg-brand-primary/5 px-3 py-1.5 rounded-full">
+                                        <Clock className="h-3.5 w-3.5 text-brand-primary" />
+                                        <span className="text-xs text-brand-textLight">
+                                          {getLocalizedDuration(activity.duration, currentLang)}
                                         </span>
                                       </div>
                                     )}
