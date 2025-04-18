@@ -163,6 +163,9 @@ export default function MapSection() {
   const mapInitializedRef = useRef(false)
   const googleMapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
   
+  // 新增：保存路徑線條的引用
+  const polylineRef = useRef<google.maps.Polyline | null>(null)
+  
   // 新增：過濾類型（按城市或按天數）和選中天數的狀態
   const [filterType, setFilterType] = useState<"byCity" | "byDay">("byDay")
   const [activeDay, setActiveDay] = useState(1)
@@ -728,9 +731,15 @@ export default function MapSection() {
     try {
       setIsChangingCategory(true);
 
-      // 清除現有標記
+      // 清除現有標記和路徑
       markers.forEach((marker) => marker.setMap(null));
       setMarkers([]);
+      
+      // 如果有現有的路徑線條，也清除它
+      if (window.google && polylineRef.current) {
+        polylineRef.current.setMap(null);
+        polylineRef.current = null;
+      }
 
       let placesToShow = [];
       const allLocationsPlaces = locations.flatMap(cat => cat.places);
@@ -780,31 +789,115 @@ export default function MapSection() {
       setMarkers(newMarkers);
 
       // 調整地圖範圍以顯示所有標記
-    if (newMarkers.length > 0 && googleMap) {
+      if (newMarkers.length > 0 && googleMap) {
         const bounds = new window.google.maps.LatLngBounds();
-      newMarkers.forEach((marker) => {
+        newMarkers.forEach((marker) => {
           bounds.extend(marker.getPosition()!);
         });
-          
-          googleMap.fitBounds(bounds, {
-            top: 50,
-            right: 50,
-            bottom: 50,
-            left: 50
+            
+        googleMap.fitBounds(bounds, {
+          top: 50,
+          right: 50,
+          bottom: 50,
+          left: 50
         });
 
-          const listener = googleMap.addListener('idle', () => {
-            if (googleMap.getZoom()! > 15) {
+        const listener = googleMap.addListener('idle', () => {
+          if (googleMap.getZoom()! > 15) {
             googleMap.setZoom(15);
           }
           google.maps.event.removeListener(listener);
           setIsChangingCategory(false);
         });
-        } else {
-          console.warn('No markers created for category:', activeCategory);
-        setIsChangingCategory(false);
+        
+        // 對於行程視圖，添加連接標記的實際駕駛路線
+        if (filterType === "byDay" && newMarkers.length > 1) {
+          // 創建Directions Service
+          const directionsService = new window.google.maps.DirectionsService();
+          
+          // 創建新的DirectionsRenderer來顯示路線
+          const directionsRenderer = new window.google.maps.DirectionsRenderer({
+            map: googleMap,
+            suppressMarkers: true, // 不顯示默認標記，使用我們自己的標記
+            polylineOptions: {
+              strokeColor: "#0066CC", // 藍色路線
+              strokeOpacity: 0.7,
+              strokeWeight: 4
+            }
+          });
+          
+          // 保存renderer以便後續清除
+          polylineRef.current = directionsRenderer as any;
+          
+          try {
+            // 準備起點、終點和中間點
+            const origin = newMarkers[0].getPosition()!;
+            const destination = newMarkers[newMarkers.length - 1].getPosition()!;
+            
+            // 提取中間點作為途經點 (waypoints)
+            const waypoints = newMarkers.slice(1, newMarkers.length - 1).map(marker => ({
+              location: marker.getPosition()!,
+              stopover: true
+            }));
+            
+            // 計算並顯示整個路線
+            directionsService.route({
+              origin: origin,
+              destination: destination,
+              waypoints: waypoints,
+              optimizeWaypoints: false, // 不優化順序，保持原有順序
+              travelMode: window.google.maps.TravelMode.DRIVING
+            }, (result: google.maps.DirectionsResult | null, status: google.maps.DirectionsStatus) => {
+              if (status === window.google.maps.DirectionsStatus.OK && result) {
+                directionsRenderer.setDirections(result);
+                
+                // 如果需要，可以在這裡顯示總行車距離和時間
+                const route = result.routes[0];
+                if (route && route.legs) {
+                  let totalDistance = 0;
+                  let totalDuration = 0;
+                  
+                  route.legs.forEach(leg => {
+                    if (leg.distance) totalDistance += leg.distance.value;
+                    if (leg.duration) totalDuration += leg.duration.value;
+                  });
+                  
+                  console.log(`總行車距離: ${(totalDistance / 1000).toFixed(1)} 公里`);
+                  console.log(`總行車時間: ${Math.floor(totalDuration / 60)} 分鐘`);
+                }
+              } else {
+                console.error("路線計算失敗:", status);
+                // 如果計算駕駛路線失敗，退回使用簡單的折線
+                const path = newMarkers.map(marker => marker.getPosition()!);
+                const polyline = new window.google.maps.Polyline({
+                  path: path,
+                  geodesic: true,
+                  strokeColor: "#FF0000",
+                  strokeOpacity: 0.8,
+                  strokeWeight: 3,
+                  icons: [{
+                    icon: {
+                      path: window.google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+                      scale: 3,
+                    },
+                    repeat: '100px'
+                  }]
+                });
+                
+                polyline.setMap(googleMap);
+                polylineRef.current = polyline;
+              }
+            });
+          } catch (error) {
+            console.error("Error setting up directions:", error);
+            setIsChangingCategory(false);
+          }
         }
-      } catch (error) {
+      } else {
+        console.warn('No markers created for category:', activeCategory);
+        setIsChangingCategory(false);
+      }
+    } catch (error) {
       console.error("Error updating map:", error);
       setMapError(t.loadError);
       setIsChangingCategory(false);
@@ -888,6 +981,12 @@ export default function MapSection() {
     // 清除現有標記
     markers.forEach((marker) => marker.setMap(null))
     setMarkers([])
+    
+    // 清除路徑線條
+    if (window.google && polylineRef.current) {
+      polylineRef.current.setMap(null)
+      polylineRef.current = null
+    }
 
     // 更新類別
     setActiveCategory(value)
@@ -932,6 +1031,12 @@ export default function MapSection() {
     // 清除現有標記
     markers.forEach((marker) => marker.setMap(null))
     setMarkers([])
+    
+    // 清除路徑線條
+    if (window.google && polylineRef.current) {
+      polylineRef.current.setMap(null)
+      polylineRef.current = null
+    }
 
     // 更新當前天數
     setActiveDay(day)
@@ -952,7 +1057,7 @@ export default function MapSection() {
         google.maps.event.addListenerOnce(googleMap, 'idle', () => {
           setIsChangingCategory(false)
           google.maps.event.trigger(googleMap, 'resize')
-      mapInitializedRef.current = false
+          mapInitializedRef.current = false
           initMap()
         })
       }
@@ -972,15 +1077,21 @@ export default function MapSection() {
     }
     
     // 清除現有標記
-      markers.forEach((marker) => marker.setMap(null))
-      setMarkers([])
-      
+    markers.forEach((marker) => marker.setMap(null))
+    setMarkers([])
+    
+    // 清除路徑線條
+    if (window.google && polylineRef.current) {
+      polylineRef.current.setMap(null)
+      polylineRef.current = null
+    }
+    
     // 重置地圖
     mapInitializedRef.current = false
     setTimeout(() => {
       initMap()
     }, 100)
-    }
+  }
 
   return (
     <section id="map" className="py-16">
