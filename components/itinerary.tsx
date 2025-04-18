@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import { format, addDays, parseISO } from "date-fns"
 import { Calendar, MapPin, Clock, Hotel, Camera, Coffee, Utensils, Bus, Train, Plane, Car, ShoppingCart } from "lucide-react"
@@ -887,7 +885,7 @@ const translations = {
         activities: [
           {
             title: "最後の買い物",
-            location: "台北市信義区",
+            location: "台北市信義區",
             description: "最後のお土産を購入",
           },
           {
@@ -898,7 +896,7 @@ const translations = {
           {
             title: "02:40発の便で台湾を出発",
             location: "台湾桃園国際空港第1ターミナル",
-            description: "台湾の旅を終える",
+            description: "結束台灣之旅",
           },
         ],
       },
@@ -1329,7 +1327,8 @@ const LANGUAGE_FONT_CLASSES = {
 } as const;
 
 // Helper Functions
-const getActivityIconComponent = (iconName: string) => {
+const getActivityIconComponent = (iconName: string | undefined) => {
+  if (!iconName) return <MapPin size={14} />;
   const IconComponent = ACTIVITY_ICONS[iconName as keyof typeof ACTIVITY_ICONS];
   return IconComponent ? <IconComponent size={14} /> : <MapPin size={14} />;
 };
@@ -1607,7 +1606,7 @@ export default function Itinerary() {
                                   whileHover={{ scale: 1.05 }}
                                   className={`w-16 h-16 bg-gradient-to-br ${iconColor} rounded-full flex items-center justify-center border-2 shadow-sm`}
                                 >
-                                  {getActivityIconComponent(activity.icon)}
+                                  {getActivityIconComponent(activity.icon || 'default')}
                                 </motion.div>
                               </div>
                               <div className="flex-grow min-w-0">
