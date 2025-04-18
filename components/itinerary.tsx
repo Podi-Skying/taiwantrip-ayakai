@@ -1623,7 +1623,7 @@ export default function Itinerary() {
                                   <span className="text-sm text-brand-textLight truncate">{localizedData.location}</span>
                                 </div>
                                 <p className="text-sm text-brand-textLight mb-3 line-clamp-2">{localizedData.description}</p>
-                                {activity.transportation && (
+                                {'transportation' in activity && activity.transportation && (
                                   <div className="flex flex-wrap items-center gap-2">
                                     <div className="flex items-center gap-2 bg-brand-primary/5 px-3 py-1.5 rounded-full">
                                       {getTransportationIcon(activity.transportation)}
@@ -1631,7 +1631,7 @@ export default function Itinerary() {
                                         {getLocalizedTransportation(activity.transportation, currentLang)}
                                       </span>
                                     </div>
-                                    {activity.duration && (
+                                    {'duration' in activity && activity.duration && (
                                       <div className="flex items-center gap-2 bg-brand-primary/5 px-3 py-1.5 rounded-full">
                                         <Clock className="h-3.5 w-3.5 text-brand-primary" />
                                         <span className="text-xs text-brand-textLight">
