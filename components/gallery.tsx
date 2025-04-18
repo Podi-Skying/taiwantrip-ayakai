@@ -359,8 +359,7 @@ const instagramPosts = [
       zh: "台北市北投ㄚ川-水煎包",
       en: "Taipei A-Chuan Water-Fried Buns",
       ja: "台北市-アーチュアン焼き包子"
-    },
-    fallbackImage: "/attractions/台北101.jpeg"
+    }
   },
   {
     id: "post-tp2",
@@ -369,8 +368,7 @@ const instagramPosts = [
       zh: "台北市石牌-生煎包",
       en: "Taipei Shipai Fried Dumplings",
       ja: "台北市-焼き小籠包"
-    },
-    fallbackImage: "/attractions/台北101.jpeg"
+    }
   },
   {
     id: "post-tp3",
@@ -379,8 +377,7 @@ const instagramPosts = [
       zh: "台北市-烤鴨捲餅",
       en: "Taipei Peking Duck Wraps",
       ja: "台北市-北京ダッククレープ"
-    },
-    fallbackImage: "/attractions/台北101.jpeg"
+    }
   },
   {
     id: "post-tp4",
@@ -389,8 +386,7 @@ const instagramPosts = [
       zh: "台北市士林忠誠-牛肉麵",
       en: "Taipei Shilin Beef Noodle Soup",
       ja: "台北市-ぎゅうにくめん"
-    },
-    fallbackImage: "/attractions/台北101.jpeg"
+    }
   },
   {
     id: "post-tp5",
@@ -399,8 +395,7 @@ const instagramPosts = [
       zh: "台北市-新鮮水果飲料",
       en: "Taipei Fresh Fruit Juice",
       ja: "台北市-新鮮フルーツジュース"
-    },
-    fallbackImage: "/attractions/台北101.jpeg"
+    }
   },
   {
     id: "post-tp6",
@@ -409,8 +404,7 @@ const instagramPosts = [
       zh: "台北市人性甜點-草莓泡芙",
       en: "Taipei Strawberry Cream Puffs",
       ja: "台北市-いちごのシュークリーム"
-    },
-    fallbackImage: "/attractions/台北101.jpeg"
+    }
   },
   {
     id: "post-tp7",
@@ -419,8 +413,7 @@ const instagramPosts = [
       zh: "台北市-曾家豆漿&深夜蛋塔",
       en: "Taipei Zeng's Soy Milk & Late Night Egg Tarts",
       ja: "台北市-曽家豆漿＆深夜のエッグタルト"
-    },
-    fallbackImage: "/attractions/台北101.jpeg"
+    }
   },
   {
     id: "post2",
@@ -429,8 +422,7 @@ const instagramPosts = [
       zh: "台北市微風平台夜景",
       en: "Taipei Breeze Platform Night View",
       ja: "台北市微風プラットフォームの夜景"
-    },
-    fallbackImage: "/attractions/台北101.jpeg"
+    }
   },
   
   // 新北市影片
@@ -441,8 +433,7 @@ const instagramPosts = [
       zh: "新北市老梅綠石槽海岸",
       en: "New Taipei Laomei Green Reef",
       ja: "新北市老梅緑石溝海岸"
-    },
-    fallbackImage: "/attractions/淡水漁人碼頭.jpg"
+    }
   },
   {
     id: "post-nt2",
@@ -451,8 +442,7 @@ const instagramPosts = [
       zh: "新北市新莊黛比-魯肉飯",
       en: "New Taipei Dabie Braised Pork Rice",
       ja: "新北市-ダイビーのルーローハン"
-    },
-    fallbackImage: "/attractions/九份老街.jpg"
+    }
   },
   {
     id: "post-nt3",
@@ -461,8 +451,7 @@ const instagramPosts = [
       zh: "新北市吳家-淡水阿給&粉漿蛋餅",
       en: "New Taipei Wu's Tamsui A-Gei & Egg Pancake",
       ja: "新北市-淡水アゲ＆クレープ風卵焼き"
-    },
-    fallbackImage: "/attractions/淡水老街.png"
+    }
   },
   {
     id: "post1",
@@ -471,8 +460,7 @@ const instagramPosts = [
       zh: "新北市美術館精彩展覽",
       en: "New Taipei City Art Museum Exhibition",
       ja: "新北市美術館の展示会"
-    },
-    fallbackImage: "/attractions/新北市美術館.jpg"
+    }
   },
   {
     id: "post3",
@@ -481,8 +469,7 @@ const instagramPosts = [
       zh: "新北市無敵海景步道",
       en: "New Taipei City Invincible Sea View Trail",
       ja: "新北市の無敵海景トレイル"
-    },
-    fallbackImage: "/attractions/淡水漁人碼頭.jpg"
+    }
   },
   
   // 台中市影片
@@ -493,8 +480,7 @@ const instagramPosts = [
       zh: "台中市阿伯-地瓜球",
       en: "Taichung Uncle's Sweet Potato Balls",
       ja: "台中市おじさんのサツマイモボール"
-    },
-    fallbackImage: "/attractions/台中市第四信用合作社.jpg"
+    }
   },
   {
     id: "post-tc2",
@@ -503,8 +489,7 @@ const instagramPosts = [
       zh: "台中市10元-車輪餅",
       en: "Taichung 10NT$ Wheel Cakes",
       ja: "台中市10元-今川焼き"
-    },
-    fallbackImage: "/attractions/台中市第四信用合作社.jpg"
+    }
   },
   {
     id: "post-tc3",
@@ -513,9 +498,8 @@ const instagramPosts = [
       zh: "台中市華美市場-無名豆花",
       en: "Taichung Huamei Market Tofu Pudding",
       ja: "台中市-名前のない豆花"
-    },
-    fallbackImage: "/attractions/高美濕地.jpg"
-  }
+    }
+  },
 ]
 
 export default function Gallery() {
@@ -612,7 +596,6 @@ export default function Gallery() {
                     <InstagramEmbed 
                       url={post.url}
                       className="instagram-embed-container h-full"
-                      fallbackImage={post.fallbackImage}
                     />
                   </div>
                   <p className="text-sm text-center mt-2 text-muted-foreground">

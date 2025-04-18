@@ -365,6 +365,66 @@ export const locations: LocationCategory[] = [
           en: "Famous platform for viewing Taipei's night scenery",
           ja: "大台北の夜景を見渡せる有名な展望台"
         }
+      },
+      { 
+        id: 30, 
+        name: {
+          zh: "鼎泰豐101店",
+          en: "Din Tai Fung (Taipei 101)",
+          ja: "鼎泰豐台北101店"
+        },
+        lat: 25.03390, 
+        lng: 121.56815, 
+        description: {
+          zh: "米其林一星餐廳，以小籠包聞名於世",
+          en: "Michelin-starred restaurant famous for xiaolongbao",
+          ja: "ミシュラン一つ星、小籠包で世界的に有名"
+        }
+      },
+      { 
+        id: 31, 
+        name: {
+          zh: "象山步道",
+          en: "Elephant Mountain Trail",
+          ja: "象山ハイキングコース"
+        },
+        lat: 25.02738,
+        lng: 121.57155,
+        description: {
+          zh: "台北著名登山步道，可俯瞰台北101和市區夜景",
+          en: "Famous hiking trail with panoramic views of Taipei 101 and city",
+          ja: "台北101と市街の夜景を一望できる有名なハイキングコース"
+        }
+      },
+      { 
+        id: 32, 
+        name: {
+          zh: "北投地熱谷",
+          en: "Beitou Thermal Valley",
+          ja: "北投地熱谷"
+        },
+        lat: 25.13784,
+        lng: 121.51122,
+        description: {
+          zh: "著名溫泉景點，又稱地獄谷",
+          en: "Famous hot spring site, also known as Hell Valley",
+          ja: "地獄谷とも呼ばれる有名な温泉スポット"
+        }
+      },
+      { 
+        id: 33, 
+        name: {
+          zh: "通化街夜市",
+          en: "Tonghua Night Market",
+          ja: "通化街夜市"
+        },
+        lat: 25.0303,
+        lng: 121.5531,
+        description: {
+          zh: "台北知名夜市，以在地美食聞名",
+          en: "Famous night market in Taipei known for local delicacies",
+          ja: "台北の有名な夜市、地元グルメで有名"
+        }
       }
     ],
   },

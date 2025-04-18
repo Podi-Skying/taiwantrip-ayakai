@@ -97,329 +97,216 @@ const translations = {
         ],
       },
       3: {
-        title: "與Emily出遊 & 台中一日遊",
+        title: "與Emily相約台北信義區",
         activities: [
           {
-            title: "從外婆家到車站",
-            location: "板橋車站",
-            description: "從台北前往台中",
+            title: "與Emily會面",
+            location: "台北市",
+            locationEn: "Taipei City",
+            description: "見面地點還沒決定",
           },
           {
-            title: "第四信用合作社",
-            location: "台中市中區",
-            description: "參觀具有歷史意義的建築",
+            title: "國立國父紀念館",
+            location: "台北市信義區",
+            description: "參觀紀念國父孫中山先生的建築",
           },
           {
-            title: "宮原眼科",
-            location: "台中市中區",
-            description: "參觀日治時期眼科診所改建的特色甜品店，品嚐特色冰淇淋",
+            title: "鼎泰豐101店",
+            location: "台北市信義區",
+            description: "享用米其林一星餐廳的小籠包",
           },
           {
-            title: "高美濕地",
-            location: "台中市清水區",
-            description: "欣賞濕地生態與美麗的夕陽景色",
+            title: "台北101觀景台",
+            location: "台北市信義區",
+            description: "① 平價方案 NT$150：88樓天際線咖啡外帶區觀景\n② 豪華方案 NT$600：觀景台門票，可前往戶外觀景台",
           },
           {
-            title: "逢甲夜市",
-            location: "台中市西屯區",
-            description: "台灣最大夜市之一，品嚐美食小吃",
+            title: "象山步道",
+            location: "台北市信義區",
+            description: "健行象山步道，欣賞台北101和市區景色",
+          },
+          {
+            title: "通化街夜市",
+            location: "台北市大安區",
+            description: "品嚐在地美食小吃",
           },
           {
             title: "返回住宿地點",
             location: "新北吉安公園（外婆家）",
-            description: "搭乘高鐵返回台北，再轉捷運回住宿地點",
-          },
+            description: "結束一天行程，返回住宿",
+          }
         ],
       },
       4: {
         title: "台北市區探索",
-        titleEn: "Taipei City Exploration",
         activities: [
           {
             title: "中正紀念堂",
-            titleEn: "Chiang Kai-shek Memorial Hall",
             location: "台北市中正區",
-            locationEn: "Zhongzheng District, Taipei City",
             description: "參觀台灣重要的歷史建築",
-            descriptionEn: "Visit an important historical building in Taiwan",
           },
           {
             title: "迪化街",
-            titleEn: "Dihua Street",
             location: "台北市大同區",
-            locationEn: "Datong District, Taipei City",
             description: "探索台北的歷史街道，購買特產和紀念品",
-            descriptionEn: "Explore Taipei's historic street, shop for specialty goods and souvenirs",
           },
           {
             title: "西門町",
-            titleEn: "Ximending",
             location: "台北市萬華區",
-            locationEn: "Wanhua District, Taipei City",
             description: "台北的時尚中心，購物和美食天堂",
-            descriptionEn: "Taipei's fashion center, shopping and food paradise",
           },
           {
             title: "密室逃脫",
             titleEn: "Escape Room",
             location: "台北市萬華區",
-            locationEn: "Wanhua District, Taipei City",
             description: "恐怖主題解謎遊戲",
-            descriptionEn: "Horror-themed puzzle game",
           },
           {
             title: "龍山寺",
             titleEn: "Lungshan Temple",
             location: "台北市萬華區",
-            locationEn: "Wanhua District, Taipei City",
             description: "參觀台灣著名的古廟",
-            descriptionEn: "Visit Taiwan's famous ancient temple",
           },
           {
             title: "返回住宿",
             titleEn: "Return to Accommodation",
             location: "新北吉安公園（外婆家）",
-            locationEn: "Ji'an Park, New Taipei City (Grandma's House)",
             description: "結束市區觀光，返回住宿",
-            descriptionEn: "End of city tour, return to accommodation",
           },
         ],
       },
       5: {
-        title: "動物園與五星級飯店",
-        titleEn: "Zoo and Five-Star Hotel",
+        title: "五星級飯店",
         activities: [
           {
-            title: "台北市立動物園",
-            titleEn: "Taipei Zoo",
-            location: "台北市文山區",
-            locationEn: "Wenshan District, Taipei City",
-            description: "參觀台灣最大的動物園",
-            descriptionEn: "Visit Taiwan's largest zoo",
-          },
-          {
             title: "準備搬家",
-            titleEn: "Prepare to Move",
             location: "新北吉安公園（外婆家）",
-            locationEn: "Ji'an Park, New Taipei City (Grandma's House)",
             description: "打包行李",
-            descriptionEn: "Pack luggage",
           },
           {
             title: "入住飯店",
-            titleEn: "Check-in",
             location: "台北圓山大飯店",
-            locationEn: "The Grand Hotel Taipei",
             description: "入住台北圓山大飯店",
-            descriptionEn: "Check in at The Grand Hotel Taipei",
           },
           {
             title: "士林夜市",
-            titleEn: "Shilin Night Market",
             location: "台北市士林區",
-            locationEn: "Shilin District, Taipei City",
             description: "台北最著名的夜市之一，品嚐各式小吃",
-            descriptionEn: "One of Taipei's most famous night markets, taste various street foods",
           },
           {
             title: "返回飯店",
-            titleEn: "Return to Hotel",
             location: "台北圓山大飯店",
-            locationEn: "The Grand Hotel Taipei",
             description: "結束一天行程，返回飯店",
-            descriptionEn: "End of day tour, return to hotel",
           },
         ],
       },
       6: {
         title: "陽明山與淡水",
-        titleEn: "Yangmingshan and Tamsui",
         activities: [
           {
             title: "擎天崗",
-            titleEn: "Qingtiangang",
             location: "台北市北投區",
-            locationEn: "Beitou District, Taipei City",
             description: "欣賞陽明山的草原景色",
-            descriptionEn: "Enjoy the grassland scenery of Yangmingshan",
           },
           {
             title: "淡水老街",
-            titleEn: "Tamsui Old Street",
             location: "新北市淡水區",
-            locationEn: "Tamsui District, New Taipei City",
             description: "探索充滿歷史的老街，品嚐在地美食",
-            descriptionEn: "Explore the historic street filled with history, taste local specialties",
           },
           {
             title: "紅毛城",
-            titleEn: "Fort San Domingo",
             location: "新北市淡水區",
-            locationEn: "Tamsui District, New Taipei City",
             description: "參觀1644年荷蘭人建造的城堡，了解台灣早期歷史",
-            descriptionEn: "Visit the fort built by the Dutch in 1644, learn about Taiwan's early history",
           },
           {
             title: "淡水漁人碼頭",
-            titleEn: "Tamsui Fisherman's Wharf",
             location: "淡水河畔",
-            locationEn: "Tamsui Riverside",
             description: "欣賞著名的淡水夕陽美景",
-            descriptionEn: "Enjoy the famous Tamsui sunset view",
           },
           {
             title: "返回飯店",
-            titleEn: "Return to Hotel",
             location: "台北圓山大飯店",
-            locationEn: "The Grand Hotel Taipei",
             description: "結束一天行程，返回飯店",
-            descriptionEn: "End of day tour, return to hotel",
           },
         ],
       },
       7: {
-        title: "與Sophia會面＆平溪線半日遊",
-        titleEn: "Meeting Sophia & Pingxi Line Half-Day Tour",
+        title: "與Sophia會面",
         activities: [
           {
             title: "退房",
-            titleEn: "Check-out",
             location: "台北圓山大飯店",
-            locationEn: "The Grand Hotel Taipei",
             description: "辦理飯店退房手續",
-            descriptionEn: "Check out from hotel",
           },
           {
             title: "返回外婆家",
-            titleEn: "Return to Grandma's House",
             location: "新北吉安公園（外婆家）",
-            locationEn: "Ji'an Park, New Taipei City (Grandma's House)",
             description: "存放行李",
-            descriptionEn: "Store luggage",
           },
           {
             title: "與Sophia見面",
-            titleEn: "Meet Sophia",
             location: "台北市",
-            locationEn: "Taipei City",
             description: "一起吃午餐",
-            descriptionEn: "Have lunch",
-          },
-          {
-            title: "十分瀑布",
-            titleEn: "Shifen Waterfall",
-            location: "新北市平溪區",
-            locationEn: "Pingxi District, New Taipei City",
-            description: "參觀台灣著名的瀑布",
-            descriptionEn: "Visit Taiwan's famous waterfall",
-          },
-          {
-            title: "平溪老街",
-            titleEn: "Pingxi Old Street",
-            location: "新北市平溪區",
-            locationEn: "Pingxi District, New Taipei City",
-            description: "體驗放天燈",
-            descriptionEn: "Experience releasing sky lanterns",
           },
           {
             title: "返回外婆家",
-            titleEn: "Return to Grandma's House",
             location: "新北吉安公園（外婆家）",
-            locationEn: "Ji'an Park, New Taipei City (Grandma's House)",
             description: "結束一天行程，返回住宿",
-            descriptionEn: "End of day tour, return to accommodation",
           },
         ],
       },
       8: {
         title: "九份一日遊",
-        titleEn: "Jiufen Day Tour",
         activities: [
           {
             title: "猴硐貓村",
-            titleEn: "Houtong Cat Village",
             location: "新北市瑞芳區",
-            locationEn: "Ruifang District, New Taipei City",
             description: "參觀以貓咪聞名的村落",
-            descriptionEn: "Visit the village famous for its cats",
           },
           {
             title: "九份老街",
-            titleEn: "Jiufen Old Street",
             location: "新北市瑞芳區",
-            locationEn: "Ruifang District, New Taipei City",
             description: "探索懷舊山城，品嚐在地美食",
-            descriptionEn: "Explore the nostalgic mountain town, taste local specialties",
           },
           {
             title: "金瓜石黃金博物館",
-            titleEn: "Jinguashi Gold Ecological Park",
             location: "新北市瑞芳區",
-            locationEn: "Ruifang District, New Taipei City",
             description: "參觀昔日的採金區，了解採礦歷史",
-            descriptionEn: "Visit the former gold mining area, learn about mining history",
           },
           {
             title: "報時山觀景台",
-            titleEn: "Baoshi Mountain Observation Deck",
             location: "新北市瑞芳區",
-            locationEn: "Ruifang District, New Taipei City",
             description: "欣賞基隆嶼和東北角海岸風景",
-            descriptionEn: "Enjoy views of Keelung Islet and the northeast coast",
+          },
+          {
+            title: "平溪老街",
+            location: "新北市平溪區",
+            description: "體驗放天燈",
           },
           {
             title: "返回住宿",
-            titleEn: "Return to Accommodation",
             location: "新北吉安公園（外婆家）",
-            locationEn: "Ji'an Park, New Taipei City (Grandma's House)",
             description: "結束一天行程，返回住宿",
-            descriptionEn: "End of day tour, return to accommodation",
           },
         ],
       },
       9: {
         title: "離開台灣",
-        titleEn: "Leaving Taiwan",
         activities: [
           {
-            title: "國父紀念館",
-            titleEn: "Sun Yat-sen Memorial Hall",
-            location: "台北市信義區",
-            locationEn: "Xinyi District, Taipei City",
-            description: "參觀紀念國父孫中山先生的紀念館",
-            descriptionEn: "Visit the memorial hall dedicated to Dr. Sun Yat-sen",
-          },
-          {
-            title: "台北101觀景台",
-            titleEn: "Taipei 101 Observatory",
-            location: "台北市信義區",
-            locationEn: "Xinyi District, Taipei City",
-            description: "參觀台北地標，欣賞城市全景",
-            descriptionEn: "Visit Taipei's landmark, enjoy city panorama",
-          },
-          {
             title: "最後購物",
-            titleEn: "Final Shopping",
             location: "台北市信義區",
-            locationEn: "Xinyi District, Taipei City",
             description: "購買最後的紀念品",
-            descriptionEn: "Buy last-minute souvenirs",
           },
           {
             title: "外婆家",
-            titleEn: "Grandma's House",
             location: "新北吉安公園（外婆家）",
-            locationEn: "Ji'an Park, New Taipei City (Grandma's House)",
             description: "打包行李，準備前往桃園機場",
-            descriptionEn: "Pack luggage, prepare for departure to Taoyuan Airport",
           },
           {
             title: "搭乘02:40航班離開台灣",
-            titleEn: "Take 02:40 Flight Departing Taiwan",
             location: "桃園國際機場第一航廈",
-            locationEn: "Taiwan Taoyuan International Airport T1",
             description: "結束台灣之旅",
-            descriptionEn: "End of Taiwan journey",
           },
         ],
       },
@@ -506,37 +393,42 @@ const translations = {
         ],
       },
       3: {
-        title: "Day Trip to Taichung with Emily",
+        title: "Meeting Emily in Xinyi District",
         activities: [
           {
-            title: "From Grandma's House to Station",
-            location: "Banqiao Station",
-            description: "Travel from Taipei to Taichung",
+            title: "Meet Emily",
+            location: "Taipei City",
+            description: "Meeting location to be determined",
           },
           {
-            title: "Fourth Credit Cooperative",
-            location: "Central District, Taichung City",
-            description: "Visit a historic building with architectural significance",
+            title: "Sun Yat-sen Memorial Hall",
+            location: "Xinyi District, Taipei City",
+            description: "Visit the memorial hall dedicated to Dr. Sun Yat-sen",
           },
           {
-            title: "Miyahara Ice Cream",
-            location: "Central District, Taichung City",
-            description: "Visit a historic ophthalmology clinic turned dessert shop, taste special ice cream",
+            title: "Din Tai Fung (Taipei 101)",
+            location: "Xinyi District, Taipei City",
+            description: "Enjoy xiaolongbao at the Michelin-starred restaurant",
           },
           {
-            title: "Gaomei Wetlands",
-            location: "Qingshui District, Taichung City",
-            description: "Enjoy the wetland ecology and beautiful sunset views",
+            title: "Taipei 101 Observatory",
+            location: "Xinyi District, Taipei City",
+            description: "① Budget Plan NT$150: Viewing area at 88F Skyline Cafe.\n② Premium Plan NT$600: Observatory ticket with outdoor deck access.",
           },
           {
-            title: "Fengjia Night Market",
-            location: "Xitun District, Taichung City",
-            description: "One of Taiwan's largest night markets, taste local delicacies",
+            title: "Elephant Mountain Trail",
+            location: "Xinyi District, Taipei City",
+            description: "Hike Elephant Mountain for panoramic views of Taipei 101 and the city",
+          },
+          {
+            title: "Tonghua Night Market",
+            location: "Da'an District, Taipei City",
+            description: "Taste local street food delicacies",
           },
           {
             title: "Return to Accommodation",
             location: "Ji'an Park, New Taipei City (Grandma's House)",
-            description: "Take HSR back to Taipei, then MRT to accommodation",
+            description: "End of day tour, return to accommodation",
           },
         ],
       },
@@ -584,13 +476,8 @@ const translations = {
         ],
       },
       5: {
-        title: "Zoo and Five-Star Hotel",
+        title: "Five-Star Hotel",
         activities: [
-          {
-            title: "Taipei Zoo",
-            location: "Wenshan District, Taipei City",
-            description: "Visit Taiwan's largest zoo",
-          },
           {
             title: "Prepare to Move",
             location: "Ji'an Park, New Taipei City (Grandma's House)",
@@ -644,7 +531,7 @@ const translations = {
         ],
       },
       7: {
-        title: "Meeting Sophia & Pingxi Line Half-Day Tour",
+        title: "Meeting Sophia",
         activities: [
           {
             title: "Check-out",
@@ -660,16 +547,6 @@ const translations = {
             title: "Meet Sophia",
             location: "Taipei City",
             description: "Have lunch",
-          },
-          {
-            title: "Shifen Waterfall",
-            location: "Pingxi District, New Taipei City",
-            description: "Visit Taiwan's famous waterfall",
-          },
-          {
-            title: "Pingxi Old Street",
-            location: "Pingxi District, New Taipei City",
-            description: "Experience releasing sky lanterns",
           },
           {
             title: "Return to Grandma's House",
@@ -702,6 +579,11 @@ const translations = {
             description: "Enjoy views of Keelung Islet and the northeast coast",
           },
           {
+            title: "Pingxi Old Street",
+            location: "Pingxi District, New Taipei City",
+            description: "Experience releasing sky lanterns",
+          },
+          {
             title: "Return to Accommodation",
             location: "Ji'an Park, New Taipei City (Grandma's House)",
             description: "End of day tour, return to accommodation",
@@ -711,16 +593,6 @@ const translations = {
       9: {
         title: "Leaving Taiwan",
         activities: [
-          {
-            title: "Sun Yat-sen Memorial Hall",
-            location: "Xinyi District, Taipei City",
-            description: "Visit the memorial hall dedicated to Dr. Sun Yat-sen",
-          },
-          {
-            title: "Taipei 101 Observatory",
-            location: "Xinyi District, Taipei City",
-            description: "Visit Taipei's landmark, enjoy city panorama",
-          },
           {
             title: "Final Shopping",
             location: "Xinyi District, Taipei City",
@@ -821,38 +693,43 @@ const translations = {
         ],
       },
       3: {
-        title: "Emilyと台中日帰り旅行",     
+        title: "Emilyと信義区デート",
         activities: [
           {
-            title: "おばあちゃんの家から駅へ",
-            location: "板橋駅",
-            description: "台北から台中へ移動",
+            title: "Emilyと待ち合わせ",
+            location: "台北市",
+            description: "待ち合わせ場所未定",
           },
           {
-            title: "第四信用合作社(アイスクリーム店)",
-            location: "台中市中区",
-            description: "歴史的な建築物を見学!アイスクリーム店!",
+            title: "国父紀念館",
+            location: "台北市信義区",
+            description: "孫文を記念する建物を見学",
           },
           {
-            title: "宮原眼科(アイスクリーム店)",
-            location: "台中市中区",
-            description: "日本統治時代の眼科医院を改装したデザートショップでアイスクリームを楽しむ",
+            title: "鼎泰豐台北101店",
+            location: "台北市信義区",
+            description: "ミシュラン一つ星の小籠包を堪能",
           },
           {
-            title: "高美湿地",
-            location: "台中市清水区",
-            description: "湿地の生態系と美しい夕日を楽しむ",
+            title: "台北101展望台",
+            location: "台北市信義区",
+            description: "① お手頃プラン NT$150：88階スカイラインカフェの立ち飲みエリア。\n② 贅沢プラン NT$600：展望台チケット（屋外デッキ付き）。",
           },
           {
-            title: "逢甲夜市",
-            location: "台中市西屯区",
-            description: "台湾最大級の夜市で様々な屋台料理を楽しむ",
+            title: "象山ハイキングコース",
+            location: "台北市信義区",
+            description: "象山を登り、台北101と市街の景色を一望",
+          },
+          {
+            title: "通化街ナイトマーケット",
+            location: "台北市大安区",
+            description: "地元の屋台グルメを楽しむ",
           },
           {
             title: "宿泊地に戻る",
             location: "新北市新店区吉安公園(おばあちゃんの家)",
-            description: "高速鉄道で台北に戻り、MRTで宿泊地へ",
-          },
+            description: "一日の観光を終え、宿泊地に戻る",
+          }
         ],
       },
       4: {
@@ -864,7 +741,7 @@ const translations = {
             description: "台湾の重要な歴史的建造物を見学",
           },
           {
-            title: "迪化街",
+            title: "迪化の古い町並み",
             location: "台北市大同区",
             description: "台北の歴史ある通りで特産品やお土産を購入",
           },
@@ -891,13 +768,8 @@ const translations = {
         ],
       },
       5: {
-        title: "動物園と五つ星ホテル",
+        title: "五つ星ホテル",
         activities: [
-          {
-            title: "台北市立動物園",
-            location: "台北市文山区",
-            description: "台湾最大の動物園を見学",
-          },
           {
             title: "引っ越し準備",
             location: "新北市新店区吉安公園(おばあちゃんの家)",
@@ -909,9 +781,9 @@ const translations = {
             description: "圓山大飯店でチェックイン手続き",
           },
           {
-            title: "士林夜市",
+            title: "士林ナイトマーケット",
             location: "台北市士林区",
-            description: "台北の有名な夜市で様々な屋台料理を楽しむ",
+            description: "台北の有名なナイトマーケットで様々な屋台料理を楽しむ",
           },
           {
             title: "ホテルに戻る",
@@ -929,9 +801,9 @@ const translations = {
             description: "陽明山の草原風景を楽しむ",
           },
           {
-            title: "淡水老街",
+            title: "淡水の古い町並み",
             location: "新北市淡水区",
-            description: "歴史情緒あふれる淡水老街を散策し、名物グルメを楽しむ",
+            description: "歴史情緒あふれる淡水の古い町並みを散策し、名物グルメを楽しむ",
           },
           {
             title: "紅毛城",
@@ -951,7 +823,7 @@ const translations = {
         ],
       },
       7: {
-        title: "Sophiaと会う & 平渓線半日ツアー",
+        title: "Sophiaと会う",
         activities: [
           {
             title: "チェックアウト",
@@ -969,16 +841,6 @@ const translations = {
             description: "ランチを食べる",
           },
           {
-            title: "シーフェン滝",
-            location: "新北市平渓区",
-            description: "台湾の有名な滝を見学",
-          },
-          {
-            title: "平渓老街",
-            location: "新北市平渓区",
-            description: "天燈上げを体験",
-          },
-          {
             title: "おばあちゃんの家に戻る",
             location: "新北市新店区吉安公園(おばあちゃんの家)",
             description: "一日の観光を終え、宿泊地に戻る",
@@ -994,7 +856,7 @@ const translations = {
             description: "猫で有名な村を訪れる",
           },
           {
-            title: "九份老街",
+            title: "九份の古い町並み",
             location: "新北市瑞芳区",
             description: "ノスタルジックな山の町を探索し、名物グルメを楽しむ",
           },
@@ -1009,6 +871,11 @@ const translations = {
             description: "基隆島と東北海岸線の絶景を楽しむ",
           },
           {
+            title: "平渓の古い町並み",
+            location: "新北市平渓区",
+            description: "天燈上げを体験",
+          },
+          {
             title: "宿泊地に戻る",
             location: "新北市新店区吉安公園(おばあちゃんの家)",
             description: "一日の観光を終え、宿泊地に戻る",
@@ -1018,16 +885,6 @@ const translations = {
       9: {
         title: "台湾出発",
         activities: [
-          {
-            title: "国父紀念館",
-            location: "台北市信義区",
-            description: "孫文を記念する建物を見学",
-          },
-          {
-            title: "台北101展望台",
-            location: "台北市信義区",
-            description: "台北のランドマークに登り、街並みを一望",
-          },
           {
             title: "最後の買い物",
             location: "台北市信義区",
@@ -1054,21 +911,14 @@ const itineraryData = [
   {
     day: 1,
     date: format(startDate, "yyyy-MM-dd"),
-    title: "一日目 - 抵達台灣",
     activities: [
       {
         time: "08:35",
-        title: "抵達桃園國際機場",
-        location: "Taiwan Taoyuan International Airport T1",
-        description: "搭乘機場捷運前往新北市",
         icon: "plane",
         image: "/attractions/桃園機場.jpg"
       },
       {
         time: "10:00",
-        title: "抵達住宿地點",
-        location: "新北吉安公園（外婆家）",
-        description: "放置行李，稍作休息",
         transportation: "開車",
         duration: "約60分鐘",
         icon: "hotel",
@@ -1076,9 +926,6 @@ const itineraryData = [
       },
       {
         time: "15:40",
-        title: "新北市美術館",
-        location: "新北市板橋區",
-        description: "參觀新北市美術館，欣賞藝術展覽",
         transportation: "開車",
         duration: "約40分鐘",
         icon: "camera",
@@ -1086,9 +933,6 @@ const itineraryData = [
       },
       {
         time: "18:30",
-        title: "東窩溪螢火蟲生態區",
-        location: "新竹縣橫山鄉",
-        description: "探訪螢火蟲生態保護區，了解當地生態環境",
         transportation: "開車",
         duration: "約60分鐘",
         icon: "camera",
@@ -1096,9 +940,6 @@ const itineraryData = [
       },
       {
         time: "21:40",
-        title: "返回住宿地點",
-        location: "新北吉安公園（外婆家）",
-        description: "結束第一天行程，返回住宿地點休息",
         transportation: "開車",
         duration: "約100分鐘",
         icon: "hotel",
@@ -1109,21 +950,14 @@ const itineraryData = [
   {
     day: 2,
     date: format(addDays(startDate, 1), "yyyy-MM-dd"),
-    title: "二日目 - 主題樂園之旅",
     activities: [
       {
         time: "06:30",
-        title: "出發前往六福村",
-        location: "新北吉安公園（外婆家）",
-        description: "從住宿地點出發前往六福村主題遊樂園",
         icon: "hotel",
         image: "/attractions/新北市新店區吉安公園(外婆家).jpg"
       },
       {
         time: "08:00",
-        title: "六福村主題遊樂園",
-        location: "新竹縣關西鎮",
-        description: "體驗台灣知名主題樂園的各種遊樂設施",
         transportation: "開車",
         duration: "約90分鐘",
         icon: "camera",
@@ -1131,9 +965,6 @@ const itineraryData = [
       },
       {
         time: "20:30",
-        title: "新北市烘爐地南山福德宮",
-        location: "新北市中和區",
-        description: "參觀知名廟宇，欣賞俯瞰台北盆地的夜景!夜景!",
         transportation: "開車",
         duration: "約90分鐘",
         icon: "camera",
@@ -1141,9 +972,6 @@ const itineraryData = [
       },
       {
         time: "21:20",
-        title: "返回住宿地點",
-        location: "新北吉安公園（外婆家）",
-        description: "結束第二天行程，返回住宿地點休息",
         transportation: "開車",
         duration: "約20分鐘",
         icon: "hotel",
@@ -1154,80 +982,49 @@ const itineraryData = [
   {
     day: 3,
     date: format(addDays(startDate, 2), "yyyy-MM-dd"),
-    title: "三日目 - 與Emily出遊 & 台中一日遊", 
     activities: [
       {
-        time: "08:30",
-        title: "從外婆家到車站",
-        location: "板橋車站",
-        description: "從台北前往台中",
-        transportation: "開車",
-        duration: "約30分鐘",
-        icon: "train",
-        image: "/attractions/板橋車站.jpg"
+        time: "??",
+        icon: "friend",
+        image: "/attractions/Friends.png"
       },
       {
-        time: "10:30",
-        title: "第四信用合作社",
-        location: "台中市中區",
-        description: "參觀具有歷史意義的建築",
-        transportation: "高鐵",
-        duration: "約90分鐘",
+        time: "??",
         icon: "camera",
-        image: "/attractions/台中市第四信用合作社.jpg"
+        image: "/attractions/國父紀念館.jpg"
       },
       {
-        time: "11:00",
-        title: "宮原眼科",
-        location: "台中市中區",
-        description: "參觀日治時期眼科診所改建的特色甜品店，品嚐特色冰淇淋",
-        transportation: "步行",
-        duration: "約15分鐘",
+        time: "??",
         icon: "utensils",
-        image: "/attractions/宮原眼科.jpg"
+        image: "/attractions/鼎泰豐101店.jpg"
       },
       {
-        time: "18:00",
-        title: "高美濕地",
-        location: "台中市清水區",
-        description: "欣賞濕地生態與美麗的夕陽景色",
-        transportation: "開車",
-        duration: "約50分鐘",
+        time: "??",
         icon: "camera",
-        image: "/attractions/高美濕地.jpg"
+        image: "/attractions/台北101.jpeg"
       },
       {
-        time: "20:00",
-        title: "逢甲夜市",
-        location: "台中市西屯區",
-        description: "台灣最大夜市之一，品嚐美食小吃",
-        transportation: "開車",
-        duration: "約60分鐘",
+        time: "??",
+        icon: "camera",
+        image: "/attractions/象山步道景色.jpg"
+      },
+      {
+        time: "??",
         icon: "utensils",
-        image: "/attractions/逢甲夜市.jpg"
+        image: "/attractions/通化街夜市美食.jpg"
       },
       {
-        time: "00:40",
-        title: "返回住宿地點",
-        location: "新北吉安公園（外婆家）",
-        description: "搭乘高鐵返回台北，再轉捷運回住宿地點",
-        transportation: "高鐵&開車",
-        duration: "約160分鐘",
-        icon: "hotel",
+        time: "??",
         image: "/attractions/新北市新店區吉安公園(外婆家).jpg"
-      },
+      }
     ],
   },
   {
     day: 4,
     date: format(addDays(startDate, 3), "yyyy-MM-dd"),
-    title: "四日目 - 台北市區探索",
     activities: [
       {
         time: "10:00",
-        title: "國立中正紀念堂",
-        location: "台北市中正區",
-        description: "參觀台灣重要歷史建築",
         transportation: "開車",
         duration: "約40分鐘",
         icon: "camera",
@@ -1235,29 +1032,20 @@ const itineraryData = [
       },
       {
         time: "11:20",
-        title: "迪化街",
-        location: "台北市大同區",
-        description: "探訪台北老街，購買特色商品與伴手禮",
         transportation: "開車",
         duration: "約20分鐘",
-        icon: "food",
+        icon: "utensils",
         image: "/attractions/迪化街.jpg"
       },
       {
         time: "14:00",
-        title: "西門町",
-        location: "台北市萬華區",
-        description: "台北潮流中心，購物與美食天堂",
         transportation: "開車",
         duration: "約15分鐘",
-        icon: "food",
+        icon: "utensils",
         image: "/attractions/西門町.jpg"
       },
       {
         time: "15:00",
-        title: "密室逃脫",
-        location: "台北市萬華區",
-        description: "鬼屋主題解謎遊戲! 還沒預定!!要來不及了!!趕快預定!!",
         transportation: "開車",
         duration: "約15分鐘",
         icon: "camera",
@@ -1265,9 +1053,6 @@ const itineraryData = [
       },
       {
         time: "19:00",
-        title: "艋舺龍山寺",
-        location: "台北市萬華區",
-        description: "參觀台灣著名的古廟",
         transportation: "開車",
         duration: "約10分鐘",
         icon: "camera",
@@ -1275,9 +1060,6 @@ const itineraryData = [
       },
       {
         time: "21:30",
-        title: "返回住宿地點",
-        location: "新北吉安公園（外婆家）",
-        description: "結束一日遊，返回住宿地點",
         transportation: "開車",
         duration: "約30分鐘",
         icon: "hotel",
@@ -1288,23 +1070,9 @@ const itineraryData = [
   {
     day: 5,
     date: format(addDays(startDate, 4), "yyyy-MM-dd"),
-    title: "五日目 - 動物園與五星飯店",
     activities: [
       {
-        time: "08:30",
-        title: "臺北市立動物園",
-        location: "台北市文山區",
-        description: "參觀台灣最大的動物園",
-        transportation: "開車",
-        duration: "約50分鐘",
-        icon: "camera",
-        image: "/attractions/木柵動物園.jpg"
-      },
-      {
         time: "13:50",
-        title: "準備搬家",
-        location: "新北吉安公園（外婆家）",
-        description: "收拾行李",
         transportation: "開車",
         duration: "約50分鐘",
         icon: "hotel",
@@ -1312,9 +1080,6 @@ const itineraryData = [
       },
       {
         time: "15:00",
-        title: "辦理入住",
-        location: "台北圓山大飯店",
-        description: "前往圓山大飯店辦理入住手續",
         transportation: "開車",
         duration: "約45分鐘",
         icon: "hotel",
@@ -1322,9 +1087,6 @@ const itineraryData = [
       },
       {
         time: "20:00",
-        title: "士林夜市",
-        location: "台北市士林區",
-        description: "台北最著名的夜市之一，品嚐各式小吃",
         transportation: "開車",
         duration: "約15分鐘",
         icon: "utensils",
@@ -1332,9 +1094,6 @@ const itineraryData = [
       },
       {
         time: "22:00",
-        title: "返回飯店",
-        location: "台北圓山大飯店",
-        description: "結束一日遊，返回飯店",
         transportation: "開車",
         duration: "約20分鐘",
         icon: "hotel",
@@ -1345,13 +1104,9 @@ const itineraryData = [
   {
     day: 6,
     date: format(addDays(startDate, 5), "yyyy-MM-dd"),
-    title: "六日目 - 陽明山與淡水",
     activities: [
       {
         time: "10:00",
-        title: "台北擎天崗",
-        location: "台北市北投區",
-        description: "欣賞陽明山草原風光",
         transportation: "開車",
         duration: "約60分鐘",
         icon: "camera",
@@ -1359,9 +1114,6 @@ const itineraryData = [
       },
       {
         time: "12:00",
-        title: "淡水老街",
-        location: "新北市淡水區",
-        description: "探訪充滿歷史風情的淡水老街，品嚐特色小吃",
         transportation: "開車",
         duration: "約70分鐘",
         icon: "utensils",
@@ -1369,9 +1121,6 @@ const itineraryData = [
       },
       {
         time: "15:00",
-        title: "淡水紅毛城",
-        location: "新北市淡水區",
-        description: "參觀荷蘭人在1644年建造的古堡，了解台灣早期歷史",
         transportation: "步行",
         duration: "約15分鐘",
         icon: "camera",
@@ -1379,17 +1128,11 @@ const itineraryData = [
       },
       {
         time: "18:00",
-        title: "淡水漁人碼頭",
-        location: "淡水河畔",
-        description: "欣賞著名的淡水夕陽美景",
         icon: "camera",
         image: "/attractions/淡水漁人碼頭.jpg"
       },
       {
         time: "20:45",
-        title: "返回住宿地點",
-        location: "台北圓山大飯店",
-        description: "結束一日遊，返回住宿地點",
         transportation: "開車",
         duration: "約45分鐘",
         icon: "hotel",
@@ -1400,63 +1143,26 @@ const itineraryData = [
   {
     day: 7,
     date: format(addDays(startDate, 6), "yyyy-MM-dd"),
-    title: "七日目 - 與Sophia會面 & 平溪線半日遊",
     activities: [
       {
         time: "11:00",
-        title: "辦理退房",
-        location: "台北圓山大飯店",
-        description: "辦理退房手續",
         icon: "hotel",
         image: "/attractions/圓山大飯店.jpg"
       },
       {
         time: "12:00",
-        title: "回外婆家",
-        location: "新北吉安公園（外婆家）",
-        description: "放行李",
         transportation: "開車",
         duration: "約45分鐘",
         icon: "hotel",
         image: "/attractions/新北市新店區吉安公園(外婆家).jpg"
       },
       {
-        time: "12:30",
-        title: "與Sophia會面",
-        location: "台北市",
-        description: "吃午餐，但還沒決定約在哪!!!",
-        transportation: "開車",
-        duration: "約30分鐘",
+        time: "??",
         icon: "utensils",
-        image: "/attractions/alert.jpg"
+        image: "/attractions/Friends.png"
       },
       {
-        time: "15:30",
-        title: "新北十分瀑布",
-        location: "新北市平溪區",
-        description: "參觀台灣著名的瀑布景點",
-        transportation: "捷運&火車",
-        duration: "約120分鐘",
-        icon: "camera",
-        image: "/attractions/十份瀑布.jpg"
-      },
-      {
-        time: "18:30",
-        title: "新北市平溪老街",
-        location: "新北市平溪區",
-        description: "體驗放天燈!放天燈!真的不過夜住宿嗎??",
-        transportation: "捷運&火車",
-        duration: "約30分鐘",
-        icon: "camera",
-        image: "/attractions/平溪老街.jpg"
-      },
-      {
-        time: "22:20",
-        title: "回外婆家",
-        location: "新北吉安公園（外婆家）",
-        description: "結束一日遊，返回住宿地點",
-        transportation: "公車",
-        duration: "約150分鐘",
+        time: "??",
         icon: "hotel",
         image: "/attractions/新北市新店區吉安公園(外婆家).jpg"
       },
@@ -1465,13 +1171,9 @@ const itineraryData = [
   {
     day: 8,
     date: format(addDays(startDate, 7), "yyyy-MM-dd"),
-    title: "八日目 - 九份地區一日遊",
     activities: [
       {
         time: "10:00",
-        title: "新北市猴硐貓村",
-        location: "新北市瑞芳區",
-        description: "探訪以貓咪聞名的小村莊",
         transportation: "捷運&火車",
         duration: "約70分鐘",
         icon: "camera",
@@ -1479,9 +1181,6 @@ const itineraryData = [
       },
       {
         time: "11:40",
-        title: "新北九份老街",
-        location: "新北市瑞芳區",
-        description: "探索充滿懷舊風情的山城，品嚐特色小吃，真的不過夜住宿嗎??",
         transportation: "捷運&公車",
         duration: "約40分鐘",
         icon: "camera",
@@ -1489,9 +1188,6 @@ const itineraryData = [
       },
       {
         time: "13:30",
-        title: "新北市金瓜石",
-        location: "新北市瑞芳區",
-        description: "參觀昔日的採金礦區，了解採礦歷史",
         transportation: "步行",
         duration: "約30分鐘",
         icon: "camera",
@@ -1499,19 +1195,20 @@ const itineraryData = [
       },
       {
         time: "15:30",
-        title: "新北市報時山觀景臺",
-        location: "新北市瑞芳區",
-        description: "欣賞基隆嶼及東北角海岸線的絕美景色",
         transportation: "步行",
         duration: "約30分鐘",
         icon: "camera",
         image: "/attractions/新北市報時山觀景臺.jpg"
       },
       {
+        time: "18:30",
+        transportation: "捷運&火車",
+        duration: "約30分鐘",
+        icon: "camera",
+        image: "/attractions/平溪老街.jpg"
+      },
+      {
         time: "22:30",
-        title: "返回住宿地點",
-        location: "新北吉安公園（外婆家）",
-        description: "結束一日遊，返回住宿地點",
         transportation: "公車&捷運",
         duration: "約150分鐘",
         icon: "hotel",
@@ -1522,30 +1219,9 @@ const itineraryData = [
   {
     day: 9,
     date: format(addDays(startDate, 8), "yyyy-MM-dd"),
-    title: "九日目 - 離開台灣",
     activities: [
       {
-        time: "10:30",
-        title: "國立國父紀念館",
-        location: "台北市信義區",
-        description: "參觀紀念國父孫中山先生的建築",
-        transportation: "捷運",
-        duration: "約50分鐘",
-        icon: "camera",
-        image: "/attractions/國父紀念館.jpg"
-      },
-      {
-        time: "14:00",
-        title: "台北101觀景台",
-        location: "台北市信義區",
-        description: "登上台北地標，欣賞城市全景",
-        transportation: "步行",
-        duration: "約10分鐘",
-        icon: "camera",
-        image: "/attractions/台北101.jpeg"
-      },
-      {
-        time: "17:00",
+        time: "??",
         title: "最後購物",
         location: "台北市信義區",
         description: "購買最後的伴手禮",
@@ -1639,11 +1315,10 @@ const ACTIVITY_ICONS = {
   camera: Camera,
   hotel: Hotel,
   coffee: Coffee,
-  utensils: Utensils,
+  utensils: Utensils,//food
   bus: Bus,
   train: Train,
   plane: Plane,
-  food: Utensils,
   "shopping-cart": ShoppingCart,
 } as const;
 
@@ -1905,11 +1580,11 @@ export default function Itinerary() {
                           camera: "from-yellow-100 to-yellow-50 border-yellow-200 text-yellow-600",
                           hotel: "from-amber-700/30 to-amber-600/20 border-amber-700/40 text-amber-700",
                           coffee: "from-amber-100 to-amber-50 border-amber-200 text-amber-600",
+                          //food
                           utensils: "from-orange-100 to-orange-50 border-orange-200 text-orange-600",
                           bus: "from-green-100 to-green-50 border-green-200 text-green-600",
                           train: "from-red-100 to-red-50 border-red-200 text-red-600",
                           plane: "from-sky-100 to-sky-50 border-sky-200 text-sky-600",
-                          food: "from-rose-100 to-rose-50 border-rose-200 text-rose-600",
                           "shopping-cart": "from-emerald-100 to-emerald-50 border-emerald-200 text-emerald-600",
                         };
                         
