@@ -747,8 +747,8 @@ export default function MapSection() {
       if (filterType === "byCity") {
         // 按城市過濾
         const category = locations.find((cat) => cat.category.zh === activeCategory);
-        if (!category) {
-          console.warn('Category not found:', activeCategory);
+      if (!category) {
+        console.warn('Category not found:', activeCategory);
           setIsChangingCategory(false);
           return;
         }
@@ -782,7 +782,7 @@ export default function MapSection() {
       const newMarkers = (await Promise.all(
         placesToShow.map(async (place) => {
           const marker = createMarker(place);
-          return marker;
+            return marker;
         })
       )).filter((marker): marker is google.maps.Marker => marker !== null);
 
@@ -794,7 +794,7 @@ export default function MapSection() {
         newMarkers.forEach((marker) => {
           bounds.extend(marker.getPosition()!);
         });
-            
+        
         googleMap.fitBounds(bounds, {
           top: 50,
           right: 50,
@@ -893,11 +893,11 @@ export default function MapSection() {
             setIsChangingCategory(false);
           }
         }
-      } else {
-        console.warn('No markers created for category:', activeCategory);
+        } else {
+          console.warn('No markers created for category:', activeCategory);
         setIsChangingCategory(false);
-      }
-    } catch (error) {
+        }
+      } catch (error) {
       console.error("Error updating map:", error);
       setMapError(t.loadError);
       setIsChangingCategory(false);
@@ -981,7 +981,7 @@ export default function MapSection() {
     // 清除現有標記
     markers.forEach((marker) => marker.setMap(null))
     setMarkers([])
-    
+
     // 清除路徑線條
     if (window.google && polylineRef.current) {
       polylineRef.current.setMap(null)
@@ -1057,7 +1057,7 @@ export default function MapSection() {
         google.maps.event.addListenerOnce(googleMap, 'idle', () => {
           setIsChangingCategory(false)
           google.maps.event.trigger(googleMap, 'resize')
-          mapInitializedRef.current = false
+      mapInitializedRef.current = false
           initMap()
         })
       }
@@ -1077,9 +1077,9 @@ export default function MapSection() {
     }
     
     // 清除現有標記
-    markers.forEach((marker) => marker.setMap(null))
-    setMarkers([])
-    
+      markers.forEach((marker) => marker.setMap(null))
+      setMarkers([])
+      
     // 清除路徑線條
     if (window.google && polylineRef.current) {
       polylineRef.current.setMap(null)
@@ -1091,7 +1091,7 @@ export default function MapSection() {
     setTimeout(() => {
       initMap()
     }, 100)
-  }
+    }
 
   return (
     <section id="map" className="py-16">
@@ -1257,13 +1257,14 @@ export default function MapSection() {
               onValueChange={handleDayTabChange}
               className="w-full"
             >
-              <TabsList className="bg-[#FFF4D6] flex w-full h-auto flex-wrap mb-6 p-1 rounded-xl">
+              <TabsList className="h-30 bg-[#FFF4D6] grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-1 mb-6 p-1 rounded-xl">
                 {dailyItinerary.map((day) => (
                   <TabsTrigger
                     key={day.day}
                     value={day.day.toString()}
                     className={cn(
-                      "flex-1 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground",
+                      "data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-md py-2 text-sm transition-colors",
+                      "hover:bg-primary/10",
                       day.day === 3 && "relative",
                       day.day === 7 && "relative"
                     )}

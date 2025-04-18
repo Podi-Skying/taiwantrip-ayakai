@@ -517,19 +517,26 @@ export default function Gallery() {
         transition={{ duration: 0.5 }}
         className="container mx-auto px-4"
       >
-        <div className="flex justify-between items-center mb-8">
-          <div className="section-title">
-            <Camera className="h-6 w-6 text-primary" />
-            <h2 className="text-3xl font-bold">{t.title}</h2>
-          </div>
-          
+        <div className="section-title">
+          <Camera className="h-6 w-6 text-primary" />
+          <h2 className="text-3xl font-bold">{t.title}</h2>
+        </div>
+        
+        {/* 過濾類型選擇器 - 置中顯示，樣式與map-section一致 */}
+        <div className="flex justify-center mb-6">
           <Tabs defaultValue="photos" onValueChange={(value) => setDisplayMode(value as 'photos' | 'instagram')}>
-            <TabsList className="bg-muted/20 gap-2 p-1.5">
-              <TabsTrigger value="photos" className="flex items-center gap-2 min-w-[6rem]">
+            <TabsList className="bg-[#FFF4D6] p-1 rounded-lg flex">
+              <TabsTrigger 
+                value="photos" 
+                className="flex items-center gap-2 px-6 py-2 rounded-md transition-colors data-[state=active]:bg-primary data-[state=active]:text-primary-foreground hover:bg-primary/10"
+              >
                 <GridIcon size={16} />
                 <span>{t.photos}</span>
               </TabsTrigger>
-              <TabsTrigger value="instagram" className="flex items-center gap-2 min-w-[6rem]">
+              <TabsTrigger 
+                value="instagram" 
+                className="flex items-center gap-2 px-6 py-2 rounded-md transition-colors data-[state=active]:bg-primary data-[state=active]:text-primary-foreground hover:bg-primary/10"
+              >
                 <InstagramIcon size={16} />
                 <span>{t.instagram}</span>
               </TabsTrigger>

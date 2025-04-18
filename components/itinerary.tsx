@@ -1013,6 +1013,7 @@ const itineraryData = [
       },
       {
         time: "??",
+        icon: "hotel",
         image: "/attractions/新北市新店區吉安公園(外婆家).jpg"
       }
     ],
