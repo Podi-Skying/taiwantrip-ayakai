@@ -156,19 +156,50 @@ export default function Header() {
           {/* Language Selector */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-brand-text">
+              <Button variant="ghost" size="icon" className="text-brand-text hover:text-foreground transition-colors relative group">
                 <Globe className="h-5 w-5" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-primary transition-all duration-300 group-hover:w-full" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => handleLanguageChange("zh")}>
-                {t.language.zh}
+            <DropdownMenuContent align="end" className="w-40 bg-background/90 backdrop-blur-md">
+              <DropdownMenuItem 
+                onClick={() => handleLanguageChange("zh")}
+                className="flex items-center gap-2 p-2 hover:bg-brand-primary/10 rounded-md transition-colors text-brand-text cursor-pointer"
+              >
+                <span className="font-medium text-sm">{t.language.zh}</span>
+                {currentLang === "zh" && (
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    className="ml-auto h-2 w-2 rounded-full bg-brand-primary"
+                  />
+                )}
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => handleLanguageChange("en")}>
-                {t.language.en}
+              <DropdownMenuItem 
+                onClick={() => handleLanguageChange("en")}
+                className="flex items-center gap-2 p-2 hover:bg-brand-primary/10 rounded-md transition-colors text-brand-text cursor-pointer"
+              >
+                <span className="font-medium text-sm">{t.language.en}</span>
+                {currentLang === "en" && (
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    className="ml-auto h-2 w-2 rounded-full bg-brand-primary"
+                  />
+                )}
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => handleLanguageChange("ja")}>
-                {t.language.ja}
+              <DropdownMenuItem 
+                onClick={() => handleLanguageChange("ja")}
+                className="flex items-center gap-2 p-2 hover:bg-brand-primary/10 rounded-md transition-colors text-brand-text cursor-pointer"
+              >
+                <span className="font-medium text-sm">{t.language.ja}</span>
+                {currentLang === "ja" && (
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    className="ml-auto h-2 w-2 rounded-full bg-brand-primary"
+                  />
+                )}
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -236,7 +267,7 @@ function MobileNavLink({
     >
       <Link
         href={href}
-        className="flex items-center gap-2 p-2 hover:bg-muted rounded-md transition-colors text-brand-text"
+        className="flex items-center gap-2 p-2 hover:bg-brand-primary/10 rounded-md transition-colors text-brand-text"
         onClick={onClick}
       >
         {icon}
