@@ -885,7 +885,7 @@ const translations = {
         activities: [
           {
             title: "最後の買い物",
-            location: "台北市信義區",
+            location: "台北市信義区",
             description: "最後のお土産を購入",
           },
           {
@@ -896,7 +896,7 @@ const translations = {
           {
             title: "02:40発の便で台湾を出発",
             location: "台湾桃園国際空港第1ターミナル",
-            description: "結束台灣之旅",
+            description: "名残惜しいけれど、台湾の旅が終わりを迎えました...",
           },
         ],
       },
@@ -1251,9 +1251,9 @@ const itineraryData = [
 // Types and Interfaces
 interface Activity {
   time: string;
-  title: string;
-  location: string;
-  description: string;
+  title?: string;
+  location?: string;
+  description?: string;
   transportation?: string;
   duration?: string;
   icon: string;
