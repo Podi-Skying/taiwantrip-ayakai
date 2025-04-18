@@ -638,19 +638,19 @@ export default function MapSection() {
             </div>
           `;
         } else {
-          // 使用完整翻譯資料
-          content = `
-            <div class="info-window">
-              <h3 class="text-lg font-semibold mb-2">${placeName}</h3>
-              ${placeInfo ? `
-                <p class="mb-2"><strong>${t.address}:</strong> ${placeInfo.address?.[currentLang as keyof typeof placeInfo.address] || ''}</p>
+          // Add a null check for 'placeInfo'
+          if (placeInfo) {
+            const addressContent = placeInfo.address?.[currentLang as keyof typeof placeInfo.address] || '';
+            content = `
+              <div class="info-window">
+                <h3 class="text-lg font-semibold mb-2">${placeName}</h3>
+                <p class="mb-2"><strong>${t.address}:</strong> ${addressContent}</p>
                 <p><strong>${t.description}:</strong> ${placeInfo.description?.[currentLang as keyof typeof placeInfo.description] || t.noDescription}</p>
-              ` : `
-                <p><strong>${t.description}:</strong> ${t.noDescription}</p>
-              `}
-              <button class="view-details-btn mt-3">${t.viewDetails}</button>
-            </div>
-          `;
+              </div>
+            `;
+          } else {
+            content = `<div class="info-window"><h3 class="text-lg font-semibold mb-2">${placeName}</h3></div>`;
+          }
         }
 
         const newInfoWindow = new window.google.maps.InfoWindow({

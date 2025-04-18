@@ -11,6 +11,8 @@ export interface Place {
   lat: number
   lng: number
   description: LocalizedText
+  address?: string
+  category?: string
 }
 
 export interface LocationCategory {
