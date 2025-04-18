@@ -62,7 +62,7 @@ export const locations: LocationCategory[] = [
         name: {
           zh: "平溪老街",
           en: "Pingxi Old Street",
-          ja: "平渓老街"
+          ja: "平渓の古い町並み"
         },
         lat: 25.0249, 
         lng: 121.7385, 
@@ -107,7 +107,7 @@ export const locations: LocationCategory[] = [
         name: {
           zh: "九份老街",
           en: "Jiufen Old Street",
-          ja: "九份老街"
+          ja: "九份の古い町並み"
         },
         lat: 25.1089, 
         lng: 121.8443, 
@@ -167,7 +167,7 @@ export const locations: LocationCategory[] = [
         name: {
           zh: "淡水老街",
           en: "Tamsui Old Street",
-          ja: "淡水老街"
+          ja: "淡水の古い町並み"
         },
         lat: 25.1726, 
         lng: 121.4389, 
@@ -190,6 +190,21 @@ export const locations: LocationCategory[] = [
           zh: "荷蘭人在1644年建造的古堡，台灣重要歷史古蹟",
           en: "Historic fort built by the Dutch in 1644, important Taiwan heritage site",
           ja: "1644年にオランダ人が建造した城、台湾の重要な史跡"
+        }
+      },
+      { 
+        id: 34, 
+        name: {
+          zh: "淡水漁人碼頭",
+          en: "Tamsui Fisherman's Wharf",
+          ja: "淡水漁人埠頭"
+        },
+        lat: 25.1827, 
+        lng: 121.4264, 
+        description: {
+          zh: "著名的觀光碼頭，以美麗夕陽和情人橋聞名",
+          en: "Famous tourist wharf known for beautiful sunsets and Lover's Bridge",
+          ja: "美しい夕日と恋人橋で有名な観光埠頭"
         }
       }
     ],
@@ -283,8 +298,8 @@ export const locations: LocationCategory[] = [
           en: "Taipei 101 Observatory",
           ja: "台北101展望台"
         },
-        lat: 25.0338, 
-        lng: 121.5646, 
+        lat: 25.03367433698218,
+        lng: 121.56488101772221, 
         description: {
           zh: "台北地標性建築",
           en: "Iconic landmark of Taipei",
@@ -296,14 +311,14 @@ export const locations: LocationCategory[] = [
         name: {
           zh: "士林夜市",
           en: "Shilin Night Market",
-          ja: "士林夜市"
+          ja: "士林ナイトマーケット"
         },
         lat: 25.0878, 
         lng: 121.5249, 
         description: {
           zh: "台北最著名的夜市之一",
           en: "One of Taipei's most famous night markets",
-          ja: "台北で最も有名な夜市の一つ"
+          ja: "台北で最も有名なナイトマーケットの一つ"
         }
       },
       { 
@@ -373,8 +388,8 @@ export const locations: LocationCategory[] = [
           en: "Din Tai Fung (Taipei 101)",
           ja: "鼎泰豐台北101店"
         },
-        lat: 25.03390, 
-        lng: 121.56815, 
+        lat: 25.03333288775191,
+        lng: 121.56465839437608, 
         description: {
           zh: "米其林一星餐廳，以小籠包聞名於世",
           en: "Michelin-starred restaurant famous for xiaolongbao",
@@ -400,7 +415,7 @@ export const locations: LocationCategory[] = [
         id: 32, 
         name: {
           zh: "北投地熱谷",
-          en: "Beitou Thermal Valley",
+          en: "Beitou T hermal Valley",
           ja: "北投地熱谷"
         },
         lat: 25.13784,
@@ -416,14 +431,44 @@ export const locations: LocationCategory[] = [
         name: {
           zh: "通化街夜市",
           en: "Tonghua Night Market",
-          ja: "通化街夜市"
+          ja: "通化街ナイトマーケット"
         },
         lat: 25.0303,
         lng: 121.5531,
         description: {
           zh: "台北知名夜市，以在地美食聞名",
           en: "Famous night market in Taipei known for local delicacies",
-          ja: "台北の有名な夜市、地元グルメで有名"
+          ja: "台北の有名なナイトマーケット、地元グルメで有名"
+        }
+      },
+      { 
+        id: 35, 
+        name: {
+          zh: "密室脫逃",
+          en: "Escape Room",
+          ja: "脱出ゲーム"
+        },
+        lat: 25.0424, 
+        lng: 121.5071, 
+        description: {
+          zh: "刺激有趣的解謎逃脫遊戲體驗",
+          en: "Exciting puzzle-solving escape game experience",
+          ja: "スリリングで面白い謎解き脱出ゲーム体験"
+        }
+      },
+      { 
+        id: 36, 
+        name: {
+          zh: "台北手工現烤鳳梨酥",
+          en: "Taipei Handmade Pineapple Cakes",
+          ja: "台北手作りパイナップルケーキ"
+        }, 
+        lat: 25.044974016117596,
+        lng: 121.50771473385615, 
+        description: {
+          zh: "提供正宗的台灣傳統伴手禮",
+          en: "Offering authentic traditional Taiwanese souvenirs",
+          ja: "台湾の伝統的なお土産を提供"
         }
       }
     ],
@@ -533,14 +578,14 @@ export const locations: LocationCategory[] = [
         name: {
           zh: "逢甲夜市",
           en: "Fengjia Night Market",
-          ja: "逢甲夜市"
+          ja: "逢甲ナイトマーケット"
         },
         lat: 24.1791, 
         lng: 120.6462, 
         description: {
           zh: "台灣最大夜市之一",
           en: "One of Taiwan's largest night markets",
-          ja: "台湾最大級の夜市"
+          ja: "台湾最大級のナイトマーケット"
         }
       },
       { 
