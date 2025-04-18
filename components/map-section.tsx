@@ -1174,12 +1174,12 @@ export default function MapSection() {
               onValueChange={handleCityTabChange}
             className="w-full"
           >
-            <TabsList className="bg-[#FFF4D6] flex w-full h-auto flex-wrap mb-6 p-1 rounded-xl">
+            <TabsList className="h-30 bg-[#FFF4D6] grid grid-cols-5 gap-1 mb-6 p-1 rounded-xl">
               {locations.map((category) => (
                 <TabsTrigger
                   key={category.category.zh}
                   value={category.category.zh}
-                  className="flex-1 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+                  className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-md py-2 text-sm transition-colors hover:bg-primary/10"
                 >
                   {t.cities[category.category.zh as keyof typeof t.cities]}
                 </TabsTrigger>
